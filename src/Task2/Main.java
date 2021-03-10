@@ -24,14 +24,14 @@ public class Main {
             System.out.println("9) Наличие слова 'бомба' в строке");
             System.out.println("10) Одинакова ли сумма ASCII в строках");
             System.out.println("0) Выход");
-            point = vvod.nextInt();
+            point = Integer.parseInt(vvod.nextLine());
 
             switch (point){
                 case 1:
                     System.out.println("Введите номер дома: ");
-                    int num = vvod.nextInt();
+                    int num = Integer.parseInt(vvod.nextLine());
                     System.out.println("Введите длинну улицы: ");
-                    int leg = vvod.nextInt();
+                    int leg = Integer.parseInt(vvod.nextLine());
                     System.out.println("Этот дом стоит напротив дома с номером: " + oppositeHouse(num,leg) + "\n");
                     break;
                 case 2:
@@ -41,9 +41,9 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Введите исходную цену: ");
-                    int price = vvod.nextInt();
+                    int price = Integer.parseInt(vvod.nextLine());
                     System.out.println("Введите процент скидки: ");
-                    int percent = vvod.nextInt();
+                    double percent = Double.parseDouble(vvod.nextLine());
                     System.out.println("Цена после скидки: " + discount(price,percent) + "\n");
                     break;
                 case 4:
@@ -55,11 +55,11 @@ public class Main {
                     break;
                 case 5:
                     System.out.println("Введите первое число: ");
-                    int one = vvod.nextInt();
+                    int one = Integer.parseInt(vvod.nextLine());
                     System.out.println("Введите второе число: ");
-                    int two = vvod.nextInt();
+                    int two = Integer.parseInt(vvod.nextLine());
                     System.out.println("Введите третье число: ");
-                    int three = vvod.nextInt();
+                    int three = Integer.parseInt(vvod.nextLine());
                     System.out.println("Количество одинаковых чисел: " + equal(one, two, three) + "\n");
                     break;
                 case 6:
@@ -69,11 +69,11 @@ public class Main {
                     break;
                 case 7:
                     System.out.println("Введите зарплату первого программиста: ");
-                    int firstprog = vvod.nextInt();
+                    int firstprog = Integer.parseInt(vvod.nextLine());
                     System.out.println("Введите зарплату второго программиста: ");
-                    int secondprog = vvod.nextInt();
+                    int secondprog = Integer.parseInt(vvod.nextLine());
                     System.out.println("Введите зарплату третьего программиста: ");
-                    int thirdprog = vvod.nextInt();
+                    int thirdprog = Integer.parseInt(vvod.nextLine());
                     System.out.println("Разница между наибольшей и набольшей зарплатой: " + programmers(firstprog,secondprog,thirdprog) + "\n");
                     break;
                 case 8:

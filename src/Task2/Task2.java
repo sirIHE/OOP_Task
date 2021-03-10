@@ -1,5 +1,7 @@
 package Task2;
 
+import java.util.Locale;
+
 public class Task2 {
     public static int oppositeHouse (int number, int leg){
         return ((2*leg+1)-number);
@@ -11,12 +13,12 @@ public class Task2 {
         rev += words[0];
         return rev;
     }
-    public static double discount(int price, int percent){
+    public static double discount(int price, double percent){
         return ((price*(100-percent))/100);
     }
     public static int differenceMaxMin(int [] mas){
         int max = mas[0], min = mas[0];
-       for (int i = 0; i < mas.length - 1; i++){
+       for (int i = 0; i < mas.length; i++){
            if (max < mas[i]) max = mas[i];
            if (min > mas[i]) min = mas[i];
        }
@@ -31,8 +33,8 @@ public class Task2 {
     public static String reverse(String s) {
         String[] words = s.split(" ");
         String rev = "";
-        for (int i = words.length - 1; i >= 0; i--){
-            rev += words[i];
+        for (int i = s.length() - 1; i >= 0; i--) {
+            rev += s.charAt(i);
         }
         return rev;
     }
@@ -47,13 +49,13 @@ public class Task2 {
     public static boolean getXO (String s){
         int co = 0; int cx = 0;
         for (int i = 0; i < s.length(); i++){
-            if ("o".equals(s.charAt(i))) co+=1;
-            else if ("x".equals(s.charAt(i))) cx+=1;
+            if (String.valueOf(s.charAt(i)).equalsIgnoreCase("o")) co++;
+            if (String.valueOf(s.charAt(i)).equalsIgnoreCase("x")) cx++;
         }
         return co == cx;
     }
     public static String bomb(String s){
-        if (s.contains("bomb")) return "ПРИГНИСЬ!";
+        if (s.toLowerCase(Locale.ROOT).contains("bomb")) return "ПРИГНИСЬ!";
         else return "Расслабься, бомбы нет";
     }
     public static boolean sameAscii (String first, String second){
