@@ -31,7 +31,6 @@ public class Task2 {
         else return 0;
     }
     public static String reverse(String s) {
-        String[] words = s.split(" ");
         String rev = "";
         for (int i = s.length() - 1; i >= 0; i--) {
             rev += s.charAt(i);
